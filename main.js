@@ -371,6 +371,55 @@ function initHeaderScroll() {
 }
 
 /* -----------------------------------------
+   SCROLL TO TOP BUTTON
+   ----------------------------------------- */
+
+/**
+ * Show/hide scroll to top button based on scroll position
+ * Smooth scroll to top when clicked
+ */
+function initScrollToTop() {
+  const scrollTopBtn = document.querySelector('.scroll-top');
+  
+  if (!scrollTopBtn) return;
+  
+  const scrollThreshold = 500;
+  
+  // Show/hide button based on scroll position
+  function toggleButton() {
+    if (window.scrollY > scrollThreshold) {
+      scrollTopBtn.classList.add('is-visible');
+    } else {
+      scrollTopBtn.classList.remove('is-visible');
+    }
+  }
+  
+  // Throttle scroll events
+  let ticking = false;
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        toggleButton();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+  
+  // Scroll to top on click
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  // Run on load
+  toggleButton();
+}
+
+/* -----------------------------------------
    INITIALIZE ALL MODULES
    ----------------------------------------- */
 
@@ -382,6 +431,7 @@ function init() {
   initSmoothScroll();
   initHeaderScroll();
   initImageLoading();
+  initScrollToTop();
 }
 
 /* -----------------------------------------

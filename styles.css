@@ -678,33 +678,40 @@ button {
 
 .hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  padding-block: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
 /* Background image container */
 .hero__background {
   position: absolute;
-  inset: 0;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .hero__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 60%;
 }
 
 /* Overlay for text readability */
 .hero__overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     to bottom,
     rgba(44, 44, 44, 0.2) 0%,
@@ -716,9 +723,9 @@ button {
 /* Hero content */
 .hero__content {
   position: relative;
-  z-index: var(--z-base);
+  z-index: 2;
   text-align: center;
-  padding-inline: var(--space-sm);
+  padding: var(--space-md);
   max-width: var(--container-narrow);
 }
 
@@ -741,7 +748,7 @@ button {
   text-shadow: 0 1px 10px rgba(44, 44, 44, 0.3);
 }
 
-/* Optional CTA button in hero */
+/* CTA button in hero */
 .hero__cta {
   margin-top: var(--space-md);
 }
@@ -763,15 +770,18 @@ button {
 .hero__scroll {
   position: absolute;
   bottom: var(--space-lg);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-2xs);
+  justify-content: center;
+  gap: var(--space-3xs);
   color: var(--clr-background);
   font-size: var(--fs-xs);
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   opacity: 0.8;
   text-decoration: none;
   transition: opacity var(--transition-fast) ease;
@@ -783,17 +793,13 @@ button {
   color: var(--clr-background);
 }
 
-.hero__scroll span {
+.hero__scroll-text {
   display: block;
-  letter-spacing: var(--ls-uppercase);
-  /* Offset the trailing letter-spacing to center properly */
-  margin-right: calc(var(--ls-uppercase) * -1);
 }
 
-.hero__scroll i {
+.hero__scroll-icon {
   display: block;
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 0.875rem;
   animation: scrollBounce 2.5s ease-in-out infinite;
 }
 
@@ -1532,7 +1538,7 @@ button {
 
 /* Submit Button */
 .contact__form .btn {
-  align-self: flex-start;
+  align-self: center;
   margin-top: var(--space-xs);
 }
 
@@ -1558,21 +1564,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   text-align: center;
-}
-
-@media (min-width: 48rem) {
-  .footer__inner {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
 }
 
 .footer__logo {
   font-family: var(--ff-heading);
-  font-size: var(--fs-h4);
+  font-size: var(--fs-h3);
   font-weight: var(--fw-light);
   color: var(--clr-text-primary);
   text-decoration: none;
@@ -1586,13 +1584,13 @@ button {
 
 .footer__social {
   display: flex;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .footer__social .social-link {
-  width: 2.25rem;
-  height: 2.25rem;
-  font-size: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.125rem;
 }
 
 .footer__copy {
@@ -1601,13 +1599,13 @@ button {
 }
 
 .footer__copy a {
-  color: var(--clr-text-secondary);
+  color: var(--clr-accent);
   transition: color var(--transition-fast) ease;
 }
 
 .footer__copy a:hover,
 .footer__copy a:focus-visible {
-  color: var(--clr-accent);
+  color: var(--clr-accent-hover);
 }
 
 /* -----------------------------------------
@@ -1615,9 +1613,51 @@ button {
    ----------------------------------------- */
 
 .footer {
-  padding-block: var(--space-lg);
+  padding-block: var(--space-xl);
   text-align: center;
   border-top: var(--border-thin);
+}
+
+/* -----------------------------------------
+   SCROLL TO TOP BUTTON
+   ----------------------------------------- */
+
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1rem;
+  color: var(--clr-background);
+  background-color: var(--clr-accent);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition: 
+    opacity var(--transition-base) ease,
+    visibility var(--transition-base) ease,
+    transform var(--transition-base) ease,
+    background-color var(--transition-fast) ease;
+  z-index: var(--z-sticky);
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-top:hover,
+.scroll-top:focus-visible {
+  background-color: var(--clr-accent-hover);
+}
+
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* -----------------------------------------
@@ -1694,8 +1734,8 @@ button {
 .reveal {
   transform: translateY(1rem);
   transition: 
-    opacity 1400ms var(--ease-out-soft),
-    transform 1400ms var(--ease-out-soft);
+    opacity 1000ms var(--ease-out-soft),
+    transform 1000ms var(--ease-out-soft);
 }
 
 .reveal.is-visible {
@@ -1724,13 +1764,13 @@ button {
   transform: translateX(0);
 }
 
-/* Stagger delays for reveal groups — luxurious spacing */
-.reveal--stagger-1 { transition-delay: 200ms; }
-.reveal--stagger-2 { transition-delay: 400ms; }
-.reveal--stagger-3 { transition-delay: 600ms; }
-.reveal--stagger-4 { transition-delay: 800ms; }
-.reveal--stagger-5 { transition-delay: 1000ms; }
-.reveal--stagger-6 { transition-delay: 1200ms; }
+/* Stagger delays for reveal groups */
+.reveal--stagger-1 { transition-delay: 100ms; }
+.reveal--stagger-2 { transition-delay: 200ms; }
+.reveal--stagger-3 { transition-delay: 300ms; }
+.reveal--stagger-4 { transition-delay: 400ms; }
+.reveal--stagger-5 { transition-delay: 500ms; }
+.reveal--stagger-6 { transition-delay: 600ms; }
 
 /* === HOVER & INTERACTIVE STATES === */
 
@@ -1781,7 +1821,9 @@ button {
 .nav-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--clr-overlay);
+  background-color: rgba(44, 44, 44, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: var(--z-overlay);
   display: flex;
   align-items: center;
@@ -1790,7 +1832,8 @@ button {
   visibility: hidden;
   transition: 
     opacity var(--transition-slow) ease,
-    visibility var(--transition-slow) ease;
+    visibility var(--transition-slow) ease,
+    backdrop-filter var(--transition-slow) ease;
 }
 
 .nav-overlay.is-active {
@@ -1912,6 +1955,13 @@ button {
   cursor: pointer;
   z-index: var(--z-modal);
   transition: color var(--transition-fast) ease;
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 48rem) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .hamburger:hover,
