@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elena Voss Photography — Professional portrait, lifestyle, and editorial photography. Capturing authentic moments and timeless stories.">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elena Voss | Portrait & Lifestyle Photographer">
+  <meta property="og:description" content="Capturing authentic moments and timeless stories through portrait, lifestyle, and editorial photography.">
+  <meta property="og:image" content="https://i.imgur.com/tXmfASn.jpeg">
+  <meta property="og:url" content="https://elenavoss.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elena Voss | Portrait & Lifestyle Photographer">
+  <meta name="twitter:description" content="Capturing authentic moments and timeless stories.">
+  <meta name="twitter:image" content="https://i.imgur.com/tXmfASn.jpeg">
+  
+  <title>Elena Voss | Portrait & Lifestyle Photographer</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://i.imgur.com">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="https://i.imgur.com/tXmfASn.jpeg" as="image">
+  
+  <!-- Favicon (placeholder - replace with real favicon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Elena Voss Photography - Home">
+          Elena Voss
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop" aria-label="Main navigation">
+          <ul class="nav-desktop__list">
+            <li>
+              <a href="#work" class="nav-desktop__link">Work</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-desktop__link">About</a>
+            </li>
+            <li>
+              <a href="#services" class="nav-desktop__link">Services</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-desktop__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- Hamburger Menu Button (Mobile) -->
+        <button 
+          class="hamburger" 
+          type="button" 
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-overlay"
+        >
+          <i class="fa-solid fa-bars hamburger__icon--menu"></i>
+          <i class="fa-solid fa-xmark hamburger__icon--close"></i>
+        </button>
+        
+      </div>
+    </div>
+  </header>
+  
+  <!-- ========================================
+       MOBILE NAVIGATION OVERLAY
+       ======================================== -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <nav class="nav-overlay__inner" aria-label="Mobile navigation">
+      <ul class="nav-overlay__list">
+        <li>
+          <a href="#work" class="nav-overlay__link">Work</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-overlay__link">About</a>
+        </li>
+        <li>
+          <a href="#services" class="nav-overlay__link">Services</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-overlay__link">Contact</a>
+        </li>
+      </ul>
+      
+      <!-- Social Links -->
+      <div class="nav-overlay__social">
+        <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://pinterest.com" class="social-link" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-pinterest-p"></i>
+        </a>
+        <a href="mailto:hello@elenavoss.com" class="social-link" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+  
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
+  <main id="main-content">
+    
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero">
+      
+      <!-- Background Image -->
+      <div class="hero__background">
+        <img 
+          class="hero__image" 
+          src="https://i.imgur.com/tXmfASn.jpeg" 
+          alt="Portrait photography by Elena Voss"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        >
+        <div class="hero__overlay"></div>
+      </div>
+      
+      <!-- Hero Content -->
+      <div class="hero__content">
+        <h1 class="hero__title fade-in-up">Capturing Light<br>& Moments</h1>
+        <p class="hero__subtitle fade-in-up fade-in-up--delay-1">Portrait & Lifestyle Photography</p>
+        <div class="hero__cta fade-in-up fade-in-up--delay-2">
+          <a href="#work" class="btn">View My Work</a>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <a href="#work" class="hero__scroll fade-in-up fade-in-up--delay-3" aria-label="Scroll to work section">
+        <span>Scroll</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+      
+    </section>
+    
+    <!-- ====== GALLERY / WORK SECTION ====== -->
+    <section id="work" class="gallery section">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <header class="gallery__header reveal">
+          <h2 class="gallery__title">Selected Work</h2>
+          <p class="gallery__subtitle">A collection of moments, beautifully captured</p>
+        </header>
+        
+        <!-- Filter Buttons (optional) -->
+        <div class="gallery__filters reveal reveal--stagger-1">
+          <button class="gallery__filter-btn is-active" data-filter="all">All</button>
+          <button class="gallery__filter-btn" data-filter="portrait">Portraits</button>
+          <button class="gallery__filter-btn" data-filter="lifestyle">Lifestyle</button>
+          <button class="gallery__filter-btn" data-filter="editorial">Editorial</button>
+        </div>
+        
+        <!-- Gallery Grid -->
+        <div class="gallery__grid">
+          
+          <!-- 
+          =====================================================
+          IMAGE OPTIMIZATION GUIDE FOR GALLERY ITEMS
+          =====================================================
+          
+          When adding real images, use this structure for optimal performance:
+          
+          <article class="gallery__item" data-lightbox="images/full/photo-1.jpg" ...>
+            <picture>
+              <source 
+                srcset="images/gallery/photo-1-400.webp 400w,
+                        images/gallery/photo-1-600.webp 600w,
+                        images/gallery/photo-1-800.webp 800w"
+                sizes="(max-width: 576px) 100vw, 
+                       (max-width: 768px) 50vw, 
+                       33vw"
+                type="image/webp"
+              >
+              <source 
+                srcset="images/gallery/photo-1-400.jpg 400w,
+                        images/gallery/photo-1-600.jpg 600w,
+                        images/gallery/photo-1-800.jpg 800w"
+                sizes="(max-width: 576px) 100vw, 
+                       (max-width: 768px) 50vw, 
+                       33vw"
+                type="image/jpeg"
+              >
+              <img 
+                class="gallery__item-image" 
+                src="images/gallery/photo-1-600.jpg" 
+                alt="Descriptive alt text"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="600"
+              >
+            </picture>
+            ...
+          </article>
+          
+          RECOMMENDED IMAGE SIZES:
+          - Thumbnails: 400w, 600w, 800w (for grid)
+          - Lightbox: 1200w, 1600w, 2000w (for full view)
+          - Formats: WebP primary, JPEG fallback
+          - Quality: 80-85% for WebP, 85-90% for JPEG
+          
+          =====================================================
+          -->
+          
+          <!-- Gallery Item 1 -->
+          <article 
+            class="gallery__item gallery__item--placeholder-1 reveal reveal--stagger-1" 
+            data-lightbox="images/gallery-1.jpg"
+            data-category="portrait"
+            tabindex="0"
+            role="button"
+            aria-label="View Golden Hour portrait"
+          >
+            <!-- Replace with real image:
+            <img 
+              class="gallery__item-image" 
+              src="images/gallery-1.jpg" 
+              alt="Portrait in golden hour light"
+              loading="lazy"
+            >
+            -->
+            <div class="gallery__item-overlay">
+              <h3 class="gallery__item-title">Golden Hour</h3>
+              <span class="gallery__item-category">Portrait</span>
+            </div>
+            <i class="fa-solid fa-expand gallery__item-icon"></i>
+          </article>
+          
+          <!-- Gallery Item 2 -->
+          <article 
+            class="gallery__item gallery__item--placeholder-2 reveal reveal--stagger-2" 
+            data-lightbox="images/gallery-2.jpg"
+            data-category="lifestyle"
+            tabindex="0"
+            role="button"
+            aria-label="View Morning Light lifestyle photo"
+          >
+            <div class="gallery__item-overlay">
+              <h3 class="gallery__item-title">Morning Light</h3>
+              <span class="gallery__item-category">Lifestyle</span>
+            </div>
+            <i class="fa-solid fa-expand gallery__item-icon"></i>
+          </article>
+          
+          <!-- Gallery Item 3 -->
+          <article 
+            class="gallery__item gallery__item--placeholder-3 reveal reveal--stagger-3" 
+            data-lightbox="images/gallery-3.jpg"
+            data-category="editorial"
+            tabindex="0"
+            role="button"
+            aria-label="View Urban Stories editorial photo"
+          >
+            <div class="gallery__item-overlay">
+              <h3 class="gallery__item-title">Urban Stories</h3>
+              <span class="gallery__item-category">Editorial</span>
+            </div>
+            <i class="fa-solid fa-expand gallery__item-icon"></i>
+          </article>
+          
+          <!-- Gallery Item 4 -->
+          <article 
+            class="gallery__item gallery__item--placeholder-4 reveal reveal--stagger-4" 
+            data-lightbox="images/gallery-4.jpg"
+            data-category="portrait"
+            tabindex="0"
+            role="button"
+            aria-label="View Quiet Moments portrait"
+          >
+            <div class="gallery__item-overlay">
+              <h3 class="gallery__item-title">Quiet Moments</h3>
+              <span class="gallery__item-category">Portrait</span>
+            </div>
+            <i class="fa-solid fa-expand gallery__item-icon"></i>
+          </article>
+          
+          <!-- Gallery Item 5 -->
+          <article 
+            class="gallery__item gallery__item--placeholder-5 reveal reveal--stagger-5" 
+            data-lightbox="images/gallery-5.jpg"
+            data-category="lifestyle"
+            tabindex="0"
+            role="button"
+            aria-label="View Sunday Brunch lifestyle photo"
+          >
+            <div class="gallery__item-overlay">
+              <h3 class="gallery__item-title">Sunday Brunch</h3>
+              <span class="gallery__item-category">Lifestyle</span>
+            </div>
+            <i class="fa-solid fa-expand gallery__item-icon"></i>
+          </article>
+          
+          <!-- Gallery Item 6 -->
+          <article 
+            class="gallery__item gallery__item--placeholder-6 reveal reveal--stagger-6" 
+            data-lightbox="images/gallery-6.jpg"
+            data-category="editorial"
+            tabindex="0"
+            role="button"
+            aria-label="View Color Study editorial photo"
+          >
+            <div class="gallery__item-overlay">
+              <h3 class="gallery__item-title">Color Study</h3>
+              <span class="gallery__item-category">Editorial</span>
+            </div>
+            <i class="fa-solid fa-expand gallery__item-icon"></i>
+          </article>
+          
+        </div>
+        
+        <!-- CTA -->
+        <div class="gallery__cta reveal">
+          <a href="#contact" class="btn">Let's Work Together</a>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ====== ABOUT SECTION ====== -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="about__inner">
+          
+          <!-- Image -->
+          <div class="about__image-wrapper reveal reveal--from-left">
+            <img 
+              class="about__image" 
+              src="https://i.imgur.com/tXmfASn.jpeg" 
+              alt="Elena Voss, portrait photographer"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          
+          <!-- Content -->
+          <div class="about__content">
+            <span class="about__label reveal">About Me</span>
+            <h2 class="about__title reveal reveal--stagger-1">Hello, I'm Elena</h2>
+            
+            <p class="about__text reveal reveal--stagger-2">
+              I'm a portrait and lifestyle photographer based in the heart of the city, 
+              with a passion for capturing authentic moments and the quiet beauty of 
+              everyday life.
+            </p>
+            
+            <p class="about__text reveal reveal--stagger-3">
+              My approach is simple: create a comfortable space where genuine expressions 
+              can unfold naturally. Whether it's a intimate portrait session or documenting 
+              your brand's story, I believe the best photographs come from real connection.
+            </p>
+            
+            <p class="about__text reveal reveal--stagger-4">
+              When I'm not behind the camera, you'll find me exploring local coffee shops, 
+              hunting for the perfect light, or planning my next adventure.
+            </p>
+            
+            <span class="about__signature reveal reveal--stagger-5">Elena Voss</span>
+            
+            <!-- Stats -->
+            <div class="about__stats reveal reveal--stagger-6">
+              <div class="about__stat">
+                <span class="about__stat-number">8+</span>
+                <span class="about__stat-label">Years Experience</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number">200+</span>
+                <span class="about__stat-label">Happy Clients</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number">15k</span>
+                <span class="about__stat-label">Photos Delivered</span>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- ====== SERVICES SECTION ====== -->
+    <section id="services" class="services section">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <header class="services__header">
+          <span class="services__label reveal">What I Offer</span>
+          <h2 class="services__title reveal reveal--stagger-1">Services & Pricing</h2>
+          <p class="services__subtitle reveal reveal--stagger-2">
+            Every session is tailored to tell your unique story
+          </p>
+        </header>
+        
+        <!-- Services Grid -->
+        <div class="services__grid">
+          
+          <!-- Service 1: Portrait -->
+          <article class="service-card reveal reveal--stagger-1">
+            <div class="service-card__icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h3 class="service-card__title">Portrait Session</h3>
+            <p class="service-card__description">
+              Personal portraits that capture your authentic self in beautiful light.
+            </p>
+            <span class="service-card__price">
+              Starting at $350 <span>/ session</span>
+            </span>
+            <ul class="service-card__features">
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                1-2 hour session
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                20+ edited images
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                Online gallery
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                Print release included
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Book Now</a>
+          </article>
+          
+          <!-- Service 2: Lifestyle -->
+          <article class="service-card reveal reveal--stagger-2">
+            <div class="service-card__icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 class="service-card__title">Lifestyle & Couples</h3>
+            <p class="service-card__description">
+              Relaxed, candid moments that celebrate your connection and story.
+            </p>
+            <span class="service-card__price">
+              Starting at $500 <span>/ session</span>
+            </span>
+            <ul class="service-card__features">
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                2-3 hour session
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                40+ edited images
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                Multiple locations
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                Outfit change included
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Book Now</a>
+          </article>
+          
+          <!-- Service 3: Brand -->
+          <article class="service-card reveal reveal--stagger-3">
+            <div class="service-card__icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="service-card__title">Brand & Editorial</h3>
+            <p class="service-card__description">
+              Elevated imagery that tells your brand's story with intention.
+            </p>
+            <span class="service-card__price">
+              Starting at $800 <span>/ session</span>
+            </span>
+            <ul class="service-card__features">
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                Half or full day
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                60+ edited images
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                Creative direction
+              </li>
+              <li class="service-card__feature">
+                <i class="fa-solid fa-check"></i>
+                Commercial license
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Book Now</a>
+          </article>
+          
+        </div>
+        
+        <!-- CTA -->
+        <div class="services__cta reveal">
+          <p class="services__note">
+            Custom packages available. Let's chat about your vision.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ====== CONTACT SECTION ====== -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="contact__inner">
+          
+          <!-- Contact Info -->
+          <div class="contact__info">
+            <span class="contact__label reveal">Get In Touch</span>
+            <h2 class="contact__title reveal reveal--stagger-1">Let's Create Together</h2>
+            <p class="contact__text reveal reveal--stagger-2">
+              Ready to capture your story? I'd love to hear about your vision. 
+              Fill out the form or reach out directly — let's make something beautiful.
+            </p>
+            
+            <!-- Contact Details -->
+            <div class="contact__details reveal reveal--stagger-3">
+              
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact__detail-content">
+                  <span class="contact__detail-label">Email</span>
+                  <span class="contact__detail-value">
+                    <a href="mailto:hello@elenavoss.com">hello@elenavoss.com</a>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact__detail-content">
+                  <span class="contact__detail-label">Phone</span>
+                  <span class="contact__detail-value">
+                    <a href="tel:+15551234567">(555) 123-4567</a>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact__detail-content">
+                  <span class="contact__detail-label">Based In</span>
+                  <span class="contact__detail-value">New York City</span>
+                </div>
+              </div>
+              
+            </div>
+            
+            <!-- Social Links -->
+            <div class="contact__social reveal reveal--stagger-4">
+              <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://pinterest.com" class="social-link" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </a>
+              <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="contact__form-wrapper reveal reveal--from-right">
+            <form class="contact__form" action="#" method="POST">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label form-label--required">Name</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    class="form-input" 
+                    placeholder="Your name"
+                    required
+                  >
+                </div>
+                
+                <div class="form-group">
+                  <label for="email" class="form-label form-label--required">Email</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="you@example.com"
+                    required
+                  >
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="service" class="form-label">Service Interested In</label>
+                <select id="service" name="service" class="form-select">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="portrait">Portrait Session</option>
+                  <option value="lifestyle">Lifestyle & Couples</option>
+                  <option value="brand">Brand & Editorial</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label form-label--required">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Tell me about your vision, preferred dates, and any questions you have..."
+                  required
+                ></textarea>
+              </div>
+              
+              <button type="submit" class="btn">
+                Send Message
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        
+        <!-- Logo -->
+        <a href="index.html" class="footer__logo">Elena Voss</a>
+        
+        <!-- Social Links -->
+        <div class="footer__social">
+          <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://pinterest.com" class="social-link" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+          <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+        
+        <!-- Copyright -->
+        <p class="footer__copy">
+          &copy; 2025 Elena Voss Photography. Made with <i class="fa-solid fa-heart" aria-hidden="true"></i> by <a href="#">HC Web Labs</a>
+        </p>
+        
+      </div>
+    </div>
+  </footer>
+  
+  <!-- ========================================
+       LIGHTBOX (Hidden by default)
+       ======================================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image lightbox">
+    <button class="lightbox__close" type="button" aria-label="Close lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <img class="lightbox__image" src="" alt="">
+  </div>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
